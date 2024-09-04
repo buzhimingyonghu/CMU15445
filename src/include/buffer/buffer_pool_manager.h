@@ -85,6 +85,10 @@ class BufferPoolManager {
    */
   auto NewPageGuarded(page_id_t *page_id) -> BasicPageGuard;
 
+  auto AllocateFrame() -> frame_id_t;
+  void ReadFrame(frame_id_t frame_id, page_id_t page_id);
+  void WriteFrame(frame_id_t frame_id, page_id_t page_id);
+
   /**
    * TODO(P1): Add implementation
    *

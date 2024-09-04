@@ -33,7 +33,8 @@ class LRUKNode {
   [[maybe_unused]] std::list<size_t> history_;
   [[maybe_unused]] size_t k_;
   [[maybe_unused]] frame_id_t fid_;
-  [[maybe_unused]] bool is_evictable_{false};
+  bool is_evictable_{false};
+  friend class LRUKReplacer;
 };
 
 /**
